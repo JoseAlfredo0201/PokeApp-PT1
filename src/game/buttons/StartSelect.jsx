@@ -1,15 +1,18 @@
 import React from 'react';
-import '../styles.css';
-const StartSelect = () => {
+
+const StartSelect = ({ handleSelectPokemon }) => {
   return (
-    <div className="container-start">
-      <div>
-        <button className="start-btn"></button>
-        <p className="start-text"> START</p>
-      </div>
-      <div>
-        <button className="start-btn"></button>
-        <p className="start-text">   SELECT</p>
+    <div style={{ paddingTop: '35%' }}>
+      <div className="container-start-select">
+        <div className="container-btn-start">
+          <button
+            className="start-select-btn"
+            onClick={() => handleSelectPokemon()}
+          >SELECT</button>
+        </div>
+        <div className="container-btn-start">
+          <button className="start-select-btn">START</button>
+        </div>
       </div>
     </div>
   );
